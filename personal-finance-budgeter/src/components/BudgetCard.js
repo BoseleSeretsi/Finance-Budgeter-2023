@@ -59,9 +59,21 @@ export default function BudgetCard({
   )
 }
 
+// function getProgressBarVariant(amount, max) { remove this if it doesnt work...use the above code instead
+//   const ratio = amount / max
+//   if (ratio < 0.5) return "primary"
+//   if (ratio < 0.75) return "warning"
+//   return "danger"
+// }
+
 function getProgressBarVariant(amount, max) {
-  const ratio = amount / max
-  if (ratio < 0.5) return "primary"
-  if (ratio < 0.75) return "warning"
-  return "danger"
+  const ratio = amount / max;
+
+  if (ratio < 0.5) return "primary";
+  if (ratio < 0.75) return "warning";
+  
+  // Alert for the danger condition
+  alert("Danger! Ratio has exceeded 75%!");
+  
+  return "danger";
 }
